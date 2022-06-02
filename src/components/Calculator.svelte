@@ -34,6 +34,8 @@
   <p class="text-sm text-slate-600">
     Type any values into the boxes below to get the correct ratio of ingredients
     for delicious pesto.
+    <br />
+    <em>Tip: 70 grams of basil makes about 1 pound of pasta.</em>
   </p>
   <div class="grid sm:grid-cols-2 gap-2 my-8">
     <Input
@@ -76,8 +78,8 @@
   <h2 class="text-md mb-1 font-semibold">Instructions:</h2>
   <p class="text-sm text-slate-800">
     In a mortar and pestle, grind nuts and garlic into a paste while adding a
-    pinch or two of kosher salt. Add basil leaves to the bowl and grind to a
-    very smooth paste (don't skimp on this step). Added paste to a large bowl
+    pinch or two of kosher salt. Add basil leaves to the mortar and grind to a
+    very smooth paste (don't skimp on this step). Add the paste to a large bowl
     and combine with grated parmesan and pecorino cheese. Finally, add
     extra-virgin olive oil to your desired consistency.
   </p>
