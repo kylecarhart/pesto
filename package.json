@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "svelte-kit dev",
-    "build": "svelte-kit build",
+    "build": "svelte-kit build && ncp ./static/.nojekyll ./build",
     "package": "svelte-kit package",
     "preview": "svelte-kit preview",
     "prepare": "svelte-kit sync",
@@ -26,6 +26,7 @@
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-svelte3": "^4.0.0",
     "gh-pages": "^4.0.0",
+    "ncp": "^2.0.0",
     "postcss": "^8.4.14",
     "prettier": "^2.5.1",
     "prettier-plugin-svelte": "^2.5.0",
