@@ -45,10 +45,14 @@
       localStorage.setItem(RATIO_STORAGE_KEY, r.toString());
     }
   }
+
+  function reset() {
+    recalc(1);
+  }
 </script>
 
 <div
-  class="py-8 sm:py-12 px-8 sm:px-16 rounded-md bg-white sm:shadow-lg sm:max-w-3xl"
+  class="py-8 sm:py-12 px-8 sm:px-16 rounded-md bg-white sm:shadow-lg sm:max-w-3xl flex flex-col"
 >
   <h1 class="text-2xl py-1">Pesto Calculator</h1>
   <p class="text-sm text-slate-600">
@@ -95,6 +99,12 @@
       onInput={() => recalc((1 / R_OIL) * oil)}
     />
   </div>
+  <button
+    class="self-end bg-slate-100 text-slate-600 text-sm py-2 px-4 rounded"
+    on:click={reset}
+  >
+    Reset
+  </button>
   <h2 class="text-md mb-1 font-semibold">Instructions:</h2>
   <p class="text-sm text-slate-800">
     In a mortar and pestle, grind nuts and garlic into a paste while adding a
