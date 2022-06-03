@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { browser } from "$app/env";
   import Input from "./Input.svelte";
 
   // Ratios
@@ -9,21 +10,40 @@
   const R_GARLIC: number = 3; // cloves
   const R_OIL: number = 80; // milli
 
+  let ratio: number = 1;
+
+  const RATIO_STORAGE_KEY = "ratio";
+  if (browser) {
+    // Give ratio in storage a default value if it doesnt exist
+    if (!localStorage.getItem(RATIO_STORAGE_KEY)) {
+      localStorage.setItem(RATIO_STORAGE_KEY, ratio.toString());
+    }
+
+    // Retrieve ratio from storage. Reset ratio if malformed.
+    const storageRatio = parseFloat(localStorage.getItem(RATIO_STORAGE_KEY)!);
+    if (!isNaN(storageRatio) && storageRatio !== 0) {
+      ratio = storageRatio;
+    }
+  }
+
   // Inputs
-  let newR: number = 1;
-  $: basil = getNewValueByRatio(newR, R_BASIL);
-  $: nuts = getNewValueByRatio(newR, R_NUTS);
-  $: parm = getNewValueByRatio(newR, R_PARM);
-  $: pec = getNewValueByRatio(newR, R_PEC);
-  $: garlic = getNewValueByRatio(newR, R_GARLIC);
-  $: oil = getNewValueByRatio(newR, R_OIL);
+  $: basil = getNewValueByRatio(ratio, R_BASIL);
+  $: nuts = getNewValueByRatio(ratio, R_NUTS);
+  $: parm = getNewValueByRatio(ratio, R_PARM);
+  $: pec = getNewValueByRatio(ratio, R_PEC);
+  $: garlic = getNewValueByRatio(ratio, R_GARLIC);
+  $: oil = getNewValueByRatio(ratio, R_OIL);
 
   function getNewValueByRatio(ratio: number, oldValue: number) {
     return Math.round(ratio * oldValue);
   }
 
   function recalc(r: number) {
-    newR = r;
+    ratio = r;
+
+    if (browser) {
+      localStorage.setItem(RATIO_STORAGE_KEY, r.toString());
+    }
   }
 </script>
 
