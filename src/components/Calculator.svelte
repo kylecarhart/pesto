@@ -105,7 +105,7 @@
     />
   </div>
   <button
-    class="self-end bg-slate-100 text-slate-600 text-sm py-2 px-4 rounded"
+    class="self-end bg-slate-100 text-slate-600 text-sm py-2 px-4 rounded active:bg-slate-200"
     on:click={reset}
   >
     Reset
