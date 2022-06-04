@@ -52,6 +52,7 @@
   }
 
   function reset() {
+    recalc(0); // Helps reset bad inputs when ratio is already 1.
     recalc(1);
   }
 </script>
