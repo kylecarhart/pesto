@@ -9,6 +9,8 @@
   <span class="block text-sm font-medium text-slate-700">{label}</span>
   <input
     type="text"
+    inputmode="numeric"
+    pattern="[0-9]*"
     id={label}
     size="4"
     bind:value={amount}
