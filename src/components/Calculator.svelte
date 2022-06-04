@@ -21,7 +21,7 @@
 
     // Retrieve ratio from storage. Reset ratio if malformed.
     const storageRatio = parseFloat(localStorage.getItem(RATIO_STORAGE_KEY)!);
-    if (!isNaN(storageRatio) && storageRatio !== 0) {
+    if (!Number.isNaN(storageRatio) && storageRatio !== 0) {
       ratio = storageRatio;
     }
   }
@@ -39,6 +39,11 @@
   }
 
   function recalc(r: number) {
+    // Dont update the ratio if the input is bad
+    if (Number.isNaN(r)) {
+      return;
+    }
+
     ratio = r;
 
     if (browser) {
