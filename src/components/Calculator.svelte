@@ -54,7 +54,7 @@
 <div
   class="py-8 sm:py-12 px-8 sm:px-16 rounded-md bg-white sm:shadow-lg sm:max-w-3xl flex flex-col"
 >
-  <h1 class="text-2xl py-1">Pesto Calculator</h1>
+  <h1 class="text-2xl pb-2">Pesto Calculator</h1>
   <p class="text-sm text-slate-600">
     Type any values into the boxes below to get the correct ratio of ingredients
     for delicious pesto.
