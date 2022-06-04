@@ -3,12 +3,14 @@
   import Github from "../icons/github.svelte";
 </script>
 
-<div class="bg-slate-50 sm:flex sm:items-center sm:justify-center sm:h-screen">
-  <Calculator />
-</div>
-<a
-  class="hidden sm:block sm:absolute sm:bottom-5 sm:right-5"
-  href="https://www.github.com/kylecarhart"
+<div
+  class="bg-slate-50 sm:flex sm:items-center sm:justify-center sm:min-h-screen relative"
 >
-  <Github />
-</a>
+  <Calculator />
+  <a
+    class="hidden sm:block sm:absolute sm:bottom-5 sm:right-5"
+    href="https://www.github.com/kylecarhart"
+  >
+    <Github />
+  </a>
+</div>
