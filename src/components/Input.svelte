@@ -5,10 +5,11 @@
   export let onInput: () => void;
 </script>
 
-<label class="relative flex flex-col ">
+<label class="relative flex flex-col" for={label}>
   <span class="block text-sm font-medium text-slate-700">{label}</span>
   <input
     type="text"
+    id={label}
     size="4"
     bind:value={amount}
     on:input={onInput}
