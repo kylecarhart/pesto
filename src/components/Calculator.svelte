@@ -112,11 +112,19 @@
     Reset
   </button>
   <h2 class="text-md mb-1 font-semibold">Instructions:</h2>
-  <p class="text-sm text-slate-800">
-    In a mortar and pestle, grind nuts and garlic into a paste while adding a
-    pinch or two of kosher salt. Add basil leaves to the mortar and grind to a
-    very smooth paste (don't skimp on this step). Add the paste to a large bowl
-    and combine with grated parmesan and pecorino cheese. Finally, add
-    extra-virgin olive oil to your desired consistency.
-  </p>
+  <ol class="list-decimal list-inside text-sm text-slate-800 space-y-1">
+    <li>
+      In a mortar and pestle, grind nuts and garlic into a paste while adding a
+      pinch or two of kosher salt.
+    </li>
+    <li>
+      Add basil leaves to the mortar and grind to a very smooth paste. Take your
+      time!
+    </li>
+    <li>
+      Add the paste to a large bowl and combine with grated parmesan and
+      pecorino cheese.
+    </li>
+    <li>Finally, add extra-virgin olive oil to your desired consistency.</li>
+  </ol>
 </div>
