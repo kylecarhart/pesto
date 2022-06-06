@@ -21,7 +21,7 @@
       invalid:border-pink-500 invalid:text-pink-600
       focus:invalid:border-pink-500 focus:invalid:ring-pink-500 "
   />
-  <span class="absolute right-3 top-8 text-slate-400 font-extralight"
-    >{unit}</span
-  >
+  <span class="absolute right-3 top-8 text-slate-400 font-extralight">
+    {unit}
+  </span>
 </label>
