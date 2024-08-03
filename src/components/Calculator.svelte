@@ -7,7 +7,7 @@
   const R_NUTS: number = 30; // grams
   const R_PARM: number = 60; // grams
   const R_PEC: number = 30; // grams
-  const R_GARLIC: number = 3; // cloves
+  const R_GARLIC: number = 5; // cloves
   const R_OIL: number = 80; // milli
 
   let ratio: number = 1;
