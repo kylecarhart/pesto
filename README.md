@@ -7,7 +7,7 @@ Adapted from SFAH (Salt Fat Acid Heat)
 ## Ingredients
 
 - ¼ cup (30 grams) pine nuts
-- 3 medium clove garlic, peeled
+- 5 medium clove garlic, peeled
 - 2 cups (70 grams) tightly packed basil leaves, preferably Genovese
 - ⅔ cup (60 grams) finely grated Parmigiano-Reggiano
 - ⅓ cup (30 grams) finely grated Pecorino Romano
