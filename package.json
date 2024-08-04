@@ -13,7 +13,7 @@
 		"format": "prettier --write .",
 		"test:integration": "playwright test",
 		"test:unit": "vitest",
-		"deploy": "node ./gh-pages.js"
+		"deploy": "npm run build && node ./gh-pages.js"
 	},
 	"devDependencies": {
 		"@playwright/test": "^1.28.1",
