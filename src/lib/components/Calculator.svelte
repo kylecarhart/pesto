@@ -28,10 +28,7 @@
 
 	if (browser) {
 		// Retrieve ratio from storage if it exists
-		const storageRatio = getRatioFromLocalStorage();
-		if (storageRatio <= 0) {
-			ratio = storageRatio;
-		}
+		ratio = getRatioFromLocalStorage();
 	}
 
 	function getNewValueByRatio(ratio: number, oldValue: number) {
