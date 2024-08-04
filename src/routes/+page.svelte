@@ -1,11 +1,13 @@
 <script lang="ts">
-	import Calculator from '$lib/components/Calculator.svelte';
-	import Github from '$lib/icons/github.svelte';
+	import Calculator from "$lib/components/Calculator.svelte";
+	import Github from "$lib/icons/github.svelte";
 
 	export let data;
 </script>
 
-<div class="bg-slate-50 sm:flex sm:items-center sm:justify-center sm:min-h-screen relative">
+<div
+	class="bg-slate-50 sm:flex sm:items-center sm:justify-center sm:min-h-screen relative"
+>
 	<Calculator formData={data.form} />
 	<a
 		class="hidden sm:block sm:absolute sm:bottom-5 sm:right-5"

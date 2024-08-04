@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { twMerge } from 'tailwind-merge';
+	import { twMerge } from "tailwind-merge";
 
 	export let value: number;
 	export let label: string;
@@ -17,17 +17,19 @@
 		type="text"
 		inputmode="numeric"
 		id={label}
-		size="4"
 		bind:value
 		on:input={onInput}
 		class={twMerge(
-			'mt-1 pl-3 pr-16 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none',
-			error && invalidCSS
+			"mt-1 pl-3 pr-16 py-2 bg-white border border-slate-300 rounded-md text-sm shadow-sm placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-1 focus:ring-sky-500 disabled:bg-slate-50 disabled:text-slate-500 disabled:border-slate-200 disabled:shadow-none",
+			error && invalidCSS,
 		)}
 		{...constraints}
 	/>
 	<span
-		class={twMerge('absolute right-3 top-8 text-slate-400 font-extralight', error && invalidCSS)}
+		class={twMerge(
+			"absolute right-3 top-8 text-slate-400 font-extralight",
+			error && invalidCSS,
+		)}
 	>
 		{unit}
 	</span>

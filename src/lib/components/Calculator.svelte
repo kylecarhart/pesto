@@ -1,17 +1,27 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
-	import { R_BASIL, R_GARLIC, R_NUTS, R_OIL, R_PARM, R_PEC } from '$lib/constants/ratios';
-	import { CalculatorSchema } from '$lib/schemas/CalculatorSchema';
-	import { getRatioFromLocalStorage, setRatioInLocalStorage } from '$lib/utils/localstorage';
-	import { superForm } from 'sveltekit-superforms';
-	import { zodClient } from 'sveltekit-superforms/adapters';
-	import Input from './Input.svelte';
+	import { browser } from "$app/environment";
+	import {
+		R_BASIL,
+		R_GARLIC,
+		R_NUTS,
+		R_OIL,
+		R_PARM,
+		R_PEC,
+	} from "$lib/constants/ratios";
+	import { CalculatorSchema } from "$lib/schemas/CalculatorSchema";
+	import {
+		getRatioFromLocalStorage,
+		setRatioInLocalStorage,
+	} from "$lib/utils/localstorage";
+	import { superForm } from "sveltekit-superforms";
+	import { zodClient } from "sveltekit-superforms/adapters";
+	import Input from "./Input.svelte";
 
 	export let formData;
 
 	const { form, constraints, errors, enhance } = superForm(formData, {
 		validators: zodClient(CalculatorSchema),
-		validationMethod: 'oninput'
+		validationMethod: "oninput",
 	});
 
 	let ratio: number = 1;
@@ -63,8 +73,8 @@
 >
 	<h1 class="text-2xl pb-2">Pesto Calculator</h1>
 	<p class="text-sm text-slate-600">
-		Type any values into the boxes below to get the correct ratio of ingredients for delicious
-		pesto.
+		Type any values into the boxes below to get the correct ratio of ingredients
+		for delicious pesto.
 		<br />
 		<em>Tip: 70 grams of basil makes about 1 pound of pasta.</em>
 	</p>
@@ -127,11 +137,17 @@
 	<h2 class="text-md mb-1 font-semibold">Instructions:</h2>
 	<ol class="list-decimal list-inside text-sm text-slate-800 space-y-1">
 		<li>
-			In a mortar and pestle, grind nuts and garlic into a paste while adding a pinch or two of
-			kosher salt.
+			In a mortar and pestle, grind nuts and garlic into a paste while adding a
+			pinch or two of kosher salt.
 		</li>
-		<li>Add basil leaves to the mortar and grind to a very smooth paste. Take your time!</li>
-		<li>Add the paste to a large bowl and combine with grated parmesan and pecorino cheese.</li>
+		<li>
+			Add basil leaves to the mortar and grind to a very smooth paste. Take your
+			time!
+		</li>
+		<li>
+			Add the paste to a large bowl and combine with grated parmesan and
+			pecorino cheese.
+		</li>
 		<li>Finally, add extra-virgin olive oil to your desired consistency.</li>
 	</ol>
 </div>
