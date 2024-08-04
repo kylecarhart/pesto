@@ -1,26 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="/pesto/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta http-equiv="content-security-policy" content="">
-	<link rel="modulepreload" href="/pesto/_app/immutable/start-fb3981e8.js">
-	<link rel="modulepreload" href="/pesto/_app/immutable/chunks/index-7e902172.js">
-  </head>
-  <body>
-    <div>
-		<script type="module" data-sveltekit-hydrate="45h">
-		import { start } from "/pesto/_app/immutable/start-fb3981e8.js";
-		start({
-			target: document.querySelector('[data-sveltekit-hydrate="45h"]').parentNode,
-			paths: {"base":"/pesto","assets":"/pesto"},
-			session: {},
-			route: true,
-			spa: true,
-			trailing_slash: "never",
-			hydrate: null
-		});
-	</script></div>
-  </body>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/pesto/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="modulepreload" href="/pesto/_app/immutable/entry/start.Cs-GpzXw.js">
+		<link rel="modulepreload" href="/pesto/_app/immutable/chunks/entry.BFB77q2I.js">
+		<link rel="modulepreload" href="/pesto/_app/immutable/chunks/scheduler.CnYiYXgY.js">
+		<link rel="modulepreload" href="/pesto/_app/immutable/entry/app.BjtghYmI.js">
+		<link rel="modulepreload" href="/pesto/_app/immutable/chunks/index.Buzin33V.js">
+	</head>
+	<body data-sveltekit-preload-data="hover">
+		<div style="display: contents">
+			<script>
+				{
+					__sveltekit_1e64bro = {
+						base: "/pesto",
+						assets: "/pesto"
+					};
+
+					const element = document.currentScript.parentElement;
+
+					Promise.all([
+						import("/pesto/_app/immutable/entry/start.Cs-GpzXw.js"),
+						import("/pesto/_app/immutable/entry/app.BjtghYmI.js")
+					]).then(([kit, app]) => {
+						kit.start(app, element);
+					});
+				}
+			</script>
+		</div>
+	</body>
 </html>
