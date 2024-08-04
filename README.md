@@ -1,38 +1,51 @@
-# create-svelte
+[View Github Pages Pesto Calculator Here](https://kylecarhart.github.io/pesto)
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+# Pesto
 
-## Creating a project
+Adapted from SFAH (Salt Fat Acid Heat)
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Ingredients
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+- ¼ cup (30 grams) pine nuts
+- 5 medium clove garlic, peeled
+- 2 cups (70 grams) tightly packed basil leaves, preferably Genovese
+- ⅔ cup (60 grams) finely grated Parmigiano-Reggiano
+- ⅓ cup (30 grams) finely grated Pecorino Romano
+- Sea salt
+- Extra-virgin olive oil (as needed)
 
-# create a new project in my-app
-npm create svelte@latest my-app
-```
+## Steps
 
-## Developing
+1. In a mortar and pestle, grind nuts and garlic into a paste while adding a
+   pinch or two of kosher salt.
+2. Add basil leaves to the mortar and grind to a very smooth paste (take your time).
+3. Add the paste to a large bowl and combine with grated parmesan and pecorino cheese.
+4. Finally, add extra-virgin olive oil to your desired consistency.
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Preserving
 
-```bash
-npm run dev
+I have found that half pint (8oz) mason jars are the ideal size for a pound of pasta and giving as gifts.
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+1. Place the pesto in the jar.
+2. Top the jar with a small layer of olive oil.
+3. Seal the lid and place in the freezer.
 
-## Building
+Thaw the jar in warm water when ready to use.
 
-To create a production version of your app:
+**Pesto will turn brown when left in the open air for too long. Seal the jar whenever possible.**
 
-```bash
-npm run build
-```
+# Dev
 
-You can preview the production build with `npm run preview`.
+## Installation
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+1. `npm install`
+
+## Development
+
+1. `npm run dev`
+2. Navigate to localhost port 3000
+
+## Deployment
+
+1. `npm run build` - Create a static build of the app in the `build` folder.
+2. `npm run deploy` - Deploy the `build` folder to `gh-pages` branch.
