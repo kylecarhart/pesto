@@ -1,60 +1,10 @@
 <script lang="ts">
-	import { browser } from '$app/environment';
+	import { R_BASIL, R_NUTS, R_PARM, R_PEC, R_GARLIC, R_OIL } from '$lib/constants/ratios';
 	import Input from './Input.svelte';
 
-	// Ratios
-	const R_BASIL: number = 70; // grams
-	const R_NUTS: number = 30; // grams
-	const R_PARM: number = 60; // grams
-	const R_PEC: number = 30; // grams
-	const R_GARLIC: number = 5; // cloves
-	const R_OIL: number = 80; // milli
-
-	let ratio: number = 1;
-
-	const RATIO_STORAGE_KEY = 'ratio';
-	if (browser) {
-		// Give ratio in storage a default value if it doesnt exist
-		if (!localStorage.getItem(RATIO_STORAGE_KEY)) {
-			localStorage.setItem(RATIO_STORAGE_KEY, ratio.toString());
-		}
-
-		// Retrieve ratio from storage. Reset ratio if malformed.
-		const storageRatio = parseFloat(localStorage.getItem(RATIO_STORAGE_KEY)!);
-		if (!Number.isNaN(storageRatio) && storageRatio !== 0) {
-			ratio = storageRatio;
-		}
-	}
-
-	// Inputs
-	$: basil = getNewValueByRatio(ratio, R_BASIL);
-	$: nuts = getNewValueByRatio(ratio, R_NUTS);
-	$: parm = getNewValueByRatio(ratio, R_PARM);
-	$: pec = getNewValueByRatio(ratio, R_PEC);
-	$: garlic = getNewValueByRatio(ratio, R_GARLIC);
-	$: oil = getNewValueByRatio(ratio, R_OIL);
-
-	function getNewValueByRatio(ratio: number, oldValue: number) {
-		return Math.round(ratio * oldValue);
-	}
-
-	function recalc(r: number) {
-		// Dont update the ratio if the input is bad
-		if (Number.isNaN(r)) {
-			return;
-		}
-
-		ratio = r;
-
-		if (browser) {
-			localStorage.setItem(RATIO_STORAGE_KEY, r.toString());
-		}
-	}
-
-	function reset() {
-		recalc(0); // Helps reset bad inputs when ratio is already 1.
-		recalc(1);
-	}
+	export let form;
+	export let recalc: (r: number) => void;
+	export let reset: () => void;
 </script>
 
 <div
@@ -71,33 +21,38 @@
 		<Input
 			label="Basil"
 			unit="g"
-			bind:amount={basil}
-			onInput={() => recalc((1 / R_BASIL) * basil)}
+			bind:value={$form.basil}
+			onInput={() => recalc((1 / R_BASIL) * $form.basil)}
 		/>
 		<Input
 			label="Pine nuts"
 			unit="g"
-			bind:amount={nuts}
-			onInput={() => recalc((1 / R_NUTS) * nuts)}
+			bind:value={$form.nuts}
+			onInput={() => recalc((1 / R_NUTS) * $form.nuts)}
 		/>
 		<Input
 			label="Parmesan"
 			unit="g"
-			bind:amount={parm}
-			onInput={() => recalc((1 / R_PARM) * parm)}
+			bind:value={$form.parm}
+			onInput={() => recalc((1 / R_PARM) * $form.parm)}
 		/>
-		<Input label="Pecorino" unit="g" bind:amount={pec} onInput={() => recalc((1 / R_PEC) * pec)} />
+		<Input
+			label="Pecorino"
+			unit="g"
+			bind:value={$form.pec}
+			onInput={() => recalc((1 / R_PEC) * $form.pec)}
+		/>
 		<Input
 			label="Garlic"
 			unit="cloves"
-			bind:amount={garlic}
-			onInput={() => recalc((1 / R_GARLIC) * garlic)}
+			bind:value={$form.garlic}
+			onInput={() => recalc((1 / R_GARLIC) * $form.garlic)}
 		/>
 		<Input
 			label="Olive Oil"
 			unit="ml"
-			bind:amount={oil}
-			onInput={() => recalc((1 / R_OIL) * oil)}
+			bind:value={$form.oil}
+			onInput={() => recalc((1 / R_OIL) * $form.oil)}
 		/>
 	</div>
 	<button
