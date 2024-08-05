@@ -6,12 +6,12 @@
 </script>
 
 <div
-	class="bg-slate-50 sm:flex sm:items-center sm:justify-center sm:min-h-screen relative"
+	class="sm:bg-slate-50 flex flex-col sm:items-center sm:justify-center sm:min-h-screen relative"
 >
 	<Calculator formData={data.form} />
 	<a
-		class="hidden sm:block sm:absolute sm:bottom-5 sm:right-5"
-		href="https://www.github.com/kylecarhart"
+		class="block m-5 self-center sm:absolute sm:bottom-5 sm:right-5"
+		href="https://www.github.com/kylecarhart/pesto"
 	>
 		<Github />
 	</a>
