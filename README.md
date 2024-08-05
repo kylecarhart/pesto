@@ -1,5 +1,9 @@
 [View Github Pages Pesto Calculator Here](https://kylecarhart.github.io/pesto)
 
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/f23347d0-ccf8-4018-a2fe-a23606a626e0" alt="Pesto Calculator Demo" />
+</p>
+
 # Pesto
 
 Adapted from SFAH (Salt Fat Acid Heat)
