@@ -1,12 +1,10 @@
-[View Github Pages Pesto Calculator Here](https://kylecarhart.github.io/pesto)
+# Pesto
 
 <p align="center">
   <img src="https://github.com/user-attachments/assets/f23347d0-ccf8-4018-a2fe-a23606a626e0" alt="Pesto Calculator Demo" />
+  <br />
+  <a href="https://kylecarhart.github.io/pesto">Try the calculator on my Github Pages!</a>
 </p>
-
-# Pesto
-
-Adapted from SFAH (Salt Fat Acid Heat)
 
 ## Ingredients
 
@@ -53,3 +51,7 @@ Thaw the jar in warm water when ready to use.
 
 1. `npm run build` - Create a static build of the app in the `build` folder.
 2. `npm run deploy` - Deploy the `build` folder to `gh-pages` branch.
+
+---
+
+> Recipe Adapted from SFAH (Salt Fat Acid Heat)
