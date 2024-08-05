@@ -116,7 +116,7 @@
 	/> -->
 </form>
 <button
-	class="bg-slate-100 text-slate-600 text-sm py-2 px-4 mb-6 rounded active:bg-slate-200"
+	class="bg-green-50 text-green-700 text-sm py-2 px-4 mb-6 rounded active:bg-green-100"
 	on:click={reset}
 >
 	Reset

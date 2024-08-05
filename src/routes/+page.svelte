@@ -6,7 +6,7 @@
 </script>
 
 <div
-	class="sm:bg-slate-50 flex flex-col sm:items-center sm:justify-center sm:min-h-screen relative"
+	class="flex flex-col sm:items-center sm:justify-center sm:min-h-screen relative bg-[rgba(255,255,255,0.70)] bg-floral-pattern bg-blend-overlay min-h-screen"
 >
 	<div
 		class="py-8 sm:py-12 px-8 sm:px-16 rounded-md bg-white sm:shadow-lg sm:max-w-3xl flex flex-col"
@@ -36,10 +36,11 @@
 			<li>Finally, add extra-virgin olive oil to your desired consistency.</li>
 		</ol>
 	</div>
-	<a
-		class="block m-5 self-center sm:absolute sm:bottom-5 sm:right-5"
-		href="https://www.github.com/kylecarhart/pesto"
+	<div
+		class="flex flex-1 items-top justify-center sm:absolute sm:bottom-5 sm:right-5"
 	>
-		<Github />
-	</a>
+		<a class="m-5" href="https://www.github.com/kylecarhart/pesto">
+			<Github />
+		</a>
+	</div>
 </div>
